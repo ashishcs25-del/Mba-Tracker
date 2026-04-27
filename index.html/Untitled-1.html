@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MBA Student Tracker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background-color: #4f46e5;
+      color: white;
+      padding: 16px 24px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* MAIN LAYOUT */
+    .layout {
+      display: flex;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 220px;
+      background-color: #1e1e2e;
+      min-height: 100vh;
+      padding: 24px 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #aaa;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 15px;
+    }
+
+    .sidebar a:hover {
+      background-color: #2e2e3e;
+      color: white;
+    }
+
+    .sidebar a.active {
+      background-color: #4f46e5;
+      color: white;
+    }
+
+    .sidebar .section-label {
+      color: #555;
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 16px 24px 6px;
+      letter-spacing: 1px;
+    }
+
+    /* MAIN CONTENT */
+    .main {
+      flex: 1;
+      padding: 32px;
+    }
+
+    .greeting {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 28px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .greeting h1 {
+      font-size: 30px;
+      margin-bottom: 4px;
+    }
+
+    .greeting p {
+      opacity: 0.85;
+      font-size: 14px;
+    }
+
+    /* STAT CARDS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .stat-card .number {
+      font-size: 32px;
+      font-weight: bold;
+      color: #4f46e5;
+    }
+
+    .stat-card .label {
+      font-size: 13px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    /* ATTENDANCE SECTION */
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 14px;
+      color: #1e1e2e;
+    }
+
+    .attendance-list {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .attendance-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .attendance-item:last-child {
+      border-bottom: none;
+    }
+
+    .subject-name {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .attendance-badge {
+      font-size: 13px;
+      font-weight: bold;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .good { background: #dcfce7; color: #16a34a; }
+    .warning { background: #fef9c3; color: #ca8a04; }
+    .danger { background: #fee2e2; color: #dc2626; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">MBA Student Tracker</div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="section-label">Academics</div>
+      <a href="#" class="active">🏠 Home</a>
+      <a href="#">📚 Courses</a>
+      <a href="#">✅ Attendance</a>
+      <a href="#">📊 Marks</a>
+      <a href="#">🏅 Certificates</a>
+      <div class="section-label">Other</div>
+      <a href="#">📅 Calendar</a>
+      <a href="#">👤 Profile</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <!-- GREETING -->
+      <div class="greeting">
+        <h1>Welcome back, Ashish! 👋</h1>
+        <p>MBA Program — Academic Year 2026-27</p>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="number">6</div>
+          <div class="label">Courses Enrolled</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">2026</div>
+          <div class="label">Batch Year</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">89%</div>
+          <div class="label">Overall Attendance</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">3</div>
+          <div class="label">Certificates Earned</div>
+        </div>
+      </div>
+
+      <!-- ATTENDANCE SUMMARY -->
+      <div class="section-title">Attendance Summary</div>
+      <div class="attendance-list">
+        <div class="attendance-item">
+          <span class="subject-name">Managerial Communication</span>
+          <span class="attendance-badge good">95%</span>
+        </div>
+        <div class="attendance-item">
+          <span class="subject-name">Management Processes & Organizational Behaviour</span>
+          <span class="attendance-badge good">91%</span>
+        </div>
+          <div class="attendance-item">
+          <span class="subject-name">Communication Skills</span>
+          <span class="attendance-badge good">94%</span>
+        </div>
+          <div class="attendance-item">
+          <span class="subject-name">Probability Maths</span>
+          <span class="attendance-badge warning">76%</span>
+        </div>
+        <div class="attendance-item">
+          <span class="subject-name">Managerial Economics</span>
+          <span class="attendance-badge warning">78%</span>
+        </div>
+        <div class="attendance-item">
+          <span class="subject-name">Business Statistics</span>
+          <span class="attendance-badge danger">65%</span>
+        </div>
+        <div class="attendance-item">
+          <span class="subject-name">Financial Accounting</span>
+          <span class="attendance-badge good">88%</span>
+        </div>
+          <div class="attendance-item">
+          <span class="subject-name">Economics</span>
+          <span class="attendance-badge danger">50%</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
