@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance - MBA Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f0f2f5; }
+
+    .topbar { background-color: #4f46e5; color: white; padding: 16px 24px; font-size: 20px; font-weight: bold; }
+
+    .layout { display: flex; }
+
+    .sidebar { width: 220px; background-color: #1e1e2e; min-height: 100vh; padding: 24px 0; }
+    .sidebar a { display: block; color: #aaa; text-decoration: none; padding: 12px 24px; font-size: 15px; }
+    .sidebar a:hover { background-color: #2e2e3e; color: white; }
+    .sidebar a.active { background-color: #4f46e5; color: white; }
+    .sidebar .section-label { color: #555; font-size: 11px; text-transform: uppercase; padding: 16px 24px 6px; letter-spacing: 1px; }
+
+    .main { flex: 1; padding: 32px; }
+
+    .page-title { font-size: 24px; font-weight: bold; color: #1e1e2e; margin-bottom: 8px; }
+    .page-subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+
+    .status-banner { padding: 16px 20px; border-radius: 10px; margin-bottom: 24px; font-weight: bold; font-size: 15px; }
+    .status-banner.good { background: #dcfce7; color: #16a34a; }
+    .status-banner.danger { background: #fee2e2; color: #dc2626; }
+
+    .attendance-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+
+    .attendance-item { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid #f0f0f0; }
+    .attendance-item:last-child { border-bottom: none; }
+
+    .subject-info { flex: 1; }
+    .subject-name { font-size: 15px; font-weight: bold; color: #1e1e2e; margin-bottom: 4px; }
+    .subject-code { font-size: 12px; color: #888; }
+
+    .attendance-right { display: flex; align-items: center; gap: 16px; }
+
+    .progress-bar { width: 120px; height: 8px; background: #f0f0f0; border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 100%; border-radius: 10px; }
+    .fill-good { background: #16a34a; }
+    .fill-warning { background: #ca8a04; }
+    .fill-danger { background: #dc2626; }
+
+    .badge { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: bold; min-width: 60px; text-align: center; }
+    .good { background: #dcfce7; color: #16a34a; }
+    .warning { background: #fef9c3; color: #ca8a04; }
+    .danger { background: #fee2e2; color: #dc2626; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">MBA Student Tracker</div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <div class="section-label">Academics</div>
+      <a href="index.html">🏠 Home</a>
+      <a href="courses.html">📚 Courses</a>
+      <a href="attendance.html" class="active">✅ Attendance</a>
+      <a href="#">📊 Marks</a>
+      <a href="#">🏅 Certificates</a>
+      <div class="section-label">Other</div>
+      <a href="#">📅 Calendar</a>
+      <a href="#">👤 Profile</a>
+    </div>
+
+    <div class="main">
+      <div class="page-title">Attendance</div>
+      <div class="page-subtitle">Semester 1 — 2025-26</div>
+
+      <!-- STATUS BANNER -->
+      <div class="status-banner danger">
+         You have a shortage in Business Statistics (65%) !
+      </div>
+
+      <!-- ATTENDANCE LIST -->
+      <div class="attendance-card">
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Managerial Communication</div>
+            <div class="subject-code">MBA106</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-good" style="width: 95%"></div></div>
+            <span class="badge good">95%</span>
+          </div>
+        </div>
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Management Processes & Organizational Behaviour</div>
+            <div class="subject-code">MBA101</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-good" style="width: 91%"></div></div>
+            <span class="badge good">91%</span>
+          </div>
+        </div>
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Managerial Economics</div>
+            <div class="subject-code">MBA102</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-warning" style="width: 78%"></div></div>
+            <span class="badge warning">78%</span>
+          </div>
+        </div>
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Business Statistics</div>
+            <div class="subject-code">MBA104</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-danger" style="width: 65%"></div></div>
+            <span class="badge danger">65%</span>
+          </div>
+        </div>
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Financial Accounting</div>
+            <div class="subject-code">MBA103</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-good" style="width: 88%"></div></div>
+            <span class="badge good">88%</span>
+          </div>
+        </div>
+
+        <div class="attendance-item">
+          <div class="subject-info">
+            <div class="subject-name">Business Communication</div>
+            <div class="subject-code">MBA105</div>
+          </div>
+          <div class="attendance-right">
+            <div class="progress-bar"><div class="progress-fill fill-warning" style="width: 80%"></div></div>
+            <span class="badge warning">80%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
