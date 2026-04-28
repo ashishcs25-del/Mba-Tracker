@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - MBA Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f0f2f5; }
+
+    .topbar { background-color: #4f46e5; color: white; padding: 16px 24px; font-size: 20px; font-weight: bold; }
+
+    .layout { display: flex; }
+
+    .sidebar { width: 220px; background-color: #1e1e2e; min-height: 100vh; padding: 24px 0; }
+    .sidebar a { display: block; color: #aaa; text-decoration: none; padding: 12px 24px; font-size: 15px; }
+    .sidebar a:hover { background-color: #2e2e3e; color: white; }
+    .sidebar a.active { background-color: #4f46e5; color: white; }
+    .sidebar .section-label { color: #555; font-size: 11px; text-transform: uppercase; padding: 16px 24px 6px; letter-spacing: 1px; }
+
+    .main { flex: 1; padding: 32px; }
+
+    .page-title { font-size: 24px; font-weight: bold; color: #1e1e2e; margin-bottom: 8px; }
+    .page-subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+
+    .tabs { display: flex; gap: 8px; margin-bottom: 24px; }
+    .tab { padding: 8px 20px; border-radius: 20px; border: none; cursor: pointer; font-size: 14px; background: white; color: #888; }
+    .tab.active { background: #4f46e5; color: white; }
+
+    .courses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .course-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .course-badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; background: #ede9fe; color: #4f46e5; margin-bottom: 14px; }
+    .course-name { font-size: 15px; font-weight: bold; color: #1e1e2e; margin-bottom: 8px; }
+    .course-code { font-size: 13px; color: #4f46e5; margin-bottom: 4px; }
+    .course-credits { font-size: 13px; color: #888; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">MBA Student Tracker</div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <div class="section-label">Academics</div>
+      <a href="index.html">🏠 Home</a>
+      <a href="courses.html" class="active">📚 Courses</a>
+      <a href="#">✅ Attendance</a>
+      <a href="#">📊 Marks</a>
+      <a href="#">🏅 Certificates</a>
+      <div class="section-label">Other</div>
+      <a href="#">📅 Calendar</a>
+      <a href="#">👤 Profile</a>
+    </div>
+
+    <div class="main">
+      <div class="page-title">My Courses</div>
+      <div class="page-subtitle">MBA Program — Semester 1</div>
+
+      <div class="tabs">
+        <button class="tab active">Current Courses</button>
+        <button class="tab">Completed</button>
+      </div>
+
+      <div class="courses-grid">
+
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Managerial Communication</div>
+          <div class="course-code">Code: MBA106</div>
+          <div class="course-credits">Credits: 3</div>
+        </div>
+
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Management Processes & Organizational Behaviour</div>
+          <div class="course-code">Code: MBA101</div>
+          <div class="course-credits">Credits: 4</div>
+        </div>
+
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Managerial Economics</div>
+          <div class="course-code">Code: MBA102</div>
+          <div class="course-credits">Credits: 4</div>
+        </div>
+
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Business Statistics</div>
+          <div class="course-code">Code: MBA104</div>
+          <div class="course-credits">Credits: 4</div>
+        </div>
+        
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Financial Accounting</div>
+          <div class="course-code">Code: MBA103</div>
+          <div class="course-credits">Credits: 4</div>
+        </div>
+        
+        <div class="course-card">
+          <span class="course-badge">CORE</span>
+          <div class="course-name">Business Communication</div>
+          <div class="course-code">Code: MBA105</div>
+          <div class="course-credits">Credits: 3</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
