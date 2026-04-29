@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates - MBA Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f0f2f5; }
+    .topbar { background-color: #4f46e5; color: white; padding: 16px 24px; font-size: 20px; font-weight: bold; }
+    .layout { display: flex; }
+    .sidebar { width: 220px; background-color: #1e1e2e; min-height: 100vh; padding: 24px 0; }
+    .sidebar a { display: block; color: #aaa; text-decoration: none; padding: 12px 24px; font-size: 15px; }
+    .sidebar a:hover { background-color: #2e2e3e; color: white; }
+    .sidebar a.active { background-color: #4f46e5; color: white; }
+    .sidebar .section-label { color: #555; font-size: 11px; text-transform: uppercase; padding: 16px 24px 6px; letter-spacing: 1px; }
+    .main { flex: 1; padding: 32px; }
+    .page-title { font-size: 24px; font-weight: bold; color: #1e1e2e; margin-bottom: 8px; }
+    .page-subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+
+    .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .cert-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-top: 4px solid #4f46e5; }
+    .cert-icon { font-size: 36px; margin-bottom: 14px; }
+    .cert-name { font-size: 16px; font-weight: bold; color: #1e1e2e; margin-bottom: 6px; }
+    .cert-org { font-size: 13px; color: #888; margin-bottom: 4px; }
+    .cert-date { font-size: 13px; color: #888; margin-bottom: 16px; }
+    .cert-footer { display: flex; justify-content: space-between; align-items: center; }
+    .status-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+    .verified { background: #dcfce7; color: #16a34a; }
+    .pending { background: #fef9c3; color: #ca8a04; }
+    .download-btn { background: #4f46e5; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+    .download-btn:hover { background: #4338ca; }
+
+    .upload-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border: 2px dashed #d0d0d0; text-align: center; cursor: pointer; }
+    .upload-card:hover { border-color: #4f46e5; }
+    .upload-icon { font-size: 36px; margin-bottom: 10px; }
+    .upload-text { font-size: 15px; font-weight: bold; color: #888; margin-bottom: 4px; }
+    .upload-subtext { font-size: 13px; color: #aaa; }
+  </style>
+</head>
+<body>
+  <div class="topbar">MBA Student Tracker</div>
+  <div class="layout">
+    <div class="sidebar">
+      <div class="section-label">Academics</div>
+      <a href="index.html">🏠 Home</a>
+      <a href="courses.html">📚 Courses</a>
+      <a href="attendance.html">✅ Attendance</a>
+      <a href="marks.html">📊 Marks</a>
+      <a href="certificates.html" class="active">🏅 Certificates</a>
+      <div class="section-label">Other</div>
+      <a href="calendar.html">📅 Calendar</a>
+      <a href="profile.html">👤 Profile</a>
+    </div>
+    <div class="main">
+      <div class="page-title">Certificates</div>
+      <div class="page-subtitle">Your earned certificates and achievements</div>
+
+      <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-name">Business Communication Skills</div>
+          <div class="cert-org">📍 Coursera</div>
+          <div class="cert-date">📅 January 2026</div>
+          <div class="cert-footer">
+            <span class="status-badge verified">✅ Verified</span>
+            <button class="download-btn">Download</button>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <div class="cert-name">Data Analysis for Business</div>
+          <div class="cert-org">📍 Google</div>
+          <div class="cert-date">📅 February 2026</div>
+          <div class="cert-footer">
+            <span class="status-badge verified">✅ Verified</span>
+            <button class="download-btn">Download</button>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">🎯</div>
+          <div class="cert-name">Project Management Fundamentals</div>
+          <div class="cert-org">📍 PMI</div>
+          <div class="cert-date">📅 March 2026</div>
+          <div class="cert-footer">
+            <span class="status-badge pending">⏳ Pending</span>
+            <button class="download-btn">Download</button>
+          </div>
+        </div>
+
+        <!-- UPLOAD NEW CARD -->
+        <div class="upload-card">
+          <div class="upload-icon">➕</div>
+          <div class="upload-text">Add Certificate</div>
+          <div class="upload-subtext">Click to upload a new certificate</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

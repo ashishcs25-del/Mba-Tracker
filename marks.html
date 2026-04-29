@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marks - MBA Tracker</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f0f2f5; }
+
+    .topbar { background-color: #4f46e5; color: white; padding: 16px 24px; font-size: 20px; font-weight: bold; }
+
+    .layout { display: flex; }
+
+    .sidebar { width: 220px; background-color: #1e1e2e; min-height: 100vh; padding: 24px 0; }
+    .sidebar a { display: block; color: #aaa; text-decoration: none; padding: 12px 24px; font-size: 15px; }
+    .sidebar a:hover { background-color: #2e2e3e; color: white; }
+    .sidebar a.active { background-color: #4f46e5; color: white; }
+    .sidebar .section-label { color: #555; font-size: 11px; text-transform: uppercase; padding: 16px 24px 6px; letter-spacing: 1px; }
+
+    .main { flex: 1; padding: 32px; }
+
+    .page-title { font-size: 24px; font-weight: bold; color: #1e1e2e; margin-bottom: 8px; }
+    .page-subtitle { color: #888; font-size: 14px; margin-bottom: 24px; }
+
+    .cgpa-banner { background: linear-gradient(135deg, #4f46e5, #7c3aed); color: white; padding: 24px; border-radius: 12px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .cgpa-banner .cgpa-number { font-size: 48px; font-weight: bold; }
+    .cgpa-banner .cgpa-label { font-size: 14px; opacity: 0.85; margin-top: 4px; }
+    .cgpa-banner .cgpa-right { text-align: right; }
+    .cgpa-banner .cgpa-rank { font-size: 14px; opacity: 0.85; }
+
+    .marks-table { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow-x: auto; }
+
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; padding: 12px 16px; font-size: 12px; color: #888; text-transform: uppercase; border-bottom: 2px solid #f0f0f0; }
+    td { padding: 16px; font-size: 14px; color: #333; border-bottom: 1px solid #f0f0f0; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover { background: #fafafa; }
+
+    .grade-badge { padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 13px; }
+    .grade-O  { background: #ede9fe; color: #4f46e5; }
+    .grade-Aplus { background: #dcfce7; color: #16a34a; }
+    .grade-A  { background: #d1fae5; color: #059669; }
+    .grade-Bplus { background: #fef9c3; color: #ca8a04; }
+    .grade-B  { background: #ffedd5; color: #ea580c; }
+    .grade-F  { background: #fee2e2; color: #dc2626; }
+
+    .result-pass { color: #16a34a; font-weight: bold; }
+    .result-fail { color: #dc2626; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">MBA Student Tracker</div>
+
+  <div class="layout">
+    <div class="sidebar">
+      <div class="section-label">Academics</div>
+      <a href="index.html">🏠 Home</a>
+      <a href="courses.html">📚 Courses</a>
+      <a href="attendance.html">✅ Attendance</a>
+      <a href="marks.html" class="active">📊 Marks</a>
+      <a href="certificates.html">🏅 Certificates</a>
+      <div class="section-label">Other</div>
+      <a href="calendar.html">📅 Calendar</a>
+      <a href="profile.html">👤 Profile</a>
+    </div>
+
+    <div class="main">
+      <div class="page-title">Marks</div>
+      <div class="page-subtitle">Semester 1 — 2025-26</div>
+
+      <!-- CGPA BANNER -->
+      <div class="cgpa-banner">
+        <div>
+          <div class="cgpa-number">8.2</div>
+          <div class="cgpa-label">Current CGPA</div>
+        </div>
+        <div class="cgpa-right">
+          <div class="cgpa-rank">Semester 1</div>
+          <div class="cgpa-rank">MBA Program</div>
+        </div>
+      </div>
+
+      <!-- MARKS TABLE -->
+      <div class="marks-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Internal (50)</th>
+              <th>External (100)</th>
+              <th>Total (150)</th>
+              <th>Grade Point</th>
+              <th>Grade</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Managerial Communication</td>
+              <td>42</td>
+              <td>78</td>
+              <td>120</td>
+              <td>9</td>
+              <td><span class="grade-badge grade-Aplus">A+</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+            <tr>
+              <td>Management Processes & OB</td>
+              <td>38</td>
+              <td>72</td>
+              <td>110</td>
+              <td>8</td>
+              <td><span class="grade-badge grade-A">A</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+            <tr>
+              <td>Managerial Economics</td>
+              <td>35</td>
+              <td>65</td>
+              <td>100</td>
+              <td>7</td>
+              <td><span class="grade-badge grade-Bplus">B+</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+            <tr>
+              <td>Business Statistics</td>
+              <td>30</td>
+              <td>55</td>
+              <td>85</td>
+              <td>6</td>
+              <td><span class="grade-badge grade-B">B</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+            <tr>
+              <td>Financial Accounting</td>
+              <td>40</td>
+              <td>75</td>
+              <td>115</td>
+              <td>8</td>
+              <td><span class="grade-badge grade-A">A</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+            <tr>
+              <td>Business Communication</td>
+              <td>45</td>
+              <td>82</td>
+              <td>127</td>
+              <td>9</td>
+              <td><span class="grade-badge grade-Aplus">A+</span></td>
+              <td class="result-pass">Pass</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
